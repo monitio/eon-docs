@@ -1,4 +1,8 @@
-# Mintlify Starter Kit
+If you see this, please do not use this. It is not done and the Eon repo is still private but Mintlify won't work with private repos for some reason. Please just don't use this as a reference guide or to steal the language I am making. Thank you.
+
+---
+
+# Mintlify - Eon Docs
 
 Click on `Use this template` to copy the Mintlify starter kit. The starter kit contains examples including
 
