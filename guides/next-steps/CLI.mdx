@@ -46,14 +46,14 @@ A typical Eon development workflow with the CLI looks like this:
 ### Run an Eon File
 
 ```bash
-$ eon run main.eon
+$ eon -run main.eon
 ```
 - Compiles and runs the `main.eon` file but does not produce an output file.
 
 ### Compile to Output
 
 ```bash
-$ eon build main.eon -o <PY|JS|C|BIN>
+$ eon -build main.eon -o <PY|JS|C|BIN>
 ```
 - Compiles the file and produces an executable or output file (Python, JavaScript, C source, or binary), depending on your setup.
 - If your code depends on `.h` files, they will be referenced but **not generated**.
@@ -61,7 +61,7 @@ $ eon build main.eon -o <PY|JS|C|BIN>
 ### Check for Errors (Lint)
 
 ```bash
-$ eon check main.eon
+$ eon -check main.eon
 ```
 - Checks your code for syntax and type errors without running it.
 - Will also check for missing or incompatible `.h` headers if referenced.

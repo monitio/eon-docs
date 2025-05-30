@@ -17,6 +17,8 @@
             "group": "About Eon",
             "pages": [
               "guides/about-eon/index",
+              "guides/about-eon/about",
+              "guides/about-eon/links",
               "guides/about-eon/features"
             ]
           },
@@ -41,7 +43,8 @@
           {
             "group": "Library Documentation",
             "pages": [
-              "library/index"
+              "library/index",
+              "library/links"
             ]
           },
           {
@@ -82,7 +85,7 @@
         },
         {
           "anchor": "Community",
-          "href": "https://discord.gg/monitio",
+          "href": "https://dc.moniti.org",
           "icon": "Discord"
         },
         {
@@ -101,18 +104,18 @@
     "links": [
       {
         "label": "Support",
-        "href": "https://discord.gg/monitio"
+        "href": "https://dc.moniti.org"
       }
     ],
     "primary": {
       "type": "button",
       "label": "Download Eon",
-      "href": "https://eon.moniti.org/download"
+      "href": "https://github.com/monitio/eon/releases"
     }
   },
   "footer": {
     "socials": {
-      "discord": "https://discord.gg/monitio",
+      "discord": "https://dc.moniti.org",
       "github": "https://github.com/monitio/eon"
     }
   }
