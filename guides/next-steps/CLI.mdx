@@ -1,0 +1,103 @@
+---
+title: Using the CLI
+sidebarTitle: "Using the CLI"
+description: Learn how to use the Eon command-line interface (CLI) for development.
+---
+
+---
+
+The Eon command-line interface (CLI) is a powerful and user-friendly tool for building, running, and managing your Eon projects from the terminal. This guide walks you through the most common commands and workflows to help you get the most out of Eon's CLI.
+
+---
+
+## Getting Started
+
+Before you begin, make sure the Eon CLI is installed on your system.
+If you haven't installed it yet, see the [Quickstart Guide](/guides/get-started/quickstart).
+
+- Eon source files should use the `.eon` extension.
+- You can also include C header files (`.h`) in your project for interoperability or declarations.
+- Place your code in one or more `.eon` files (and optionally `.h` files) in your project directory.
+
+---
+
+## Basic Workflow
+
+A typical Eon development workflow with the CLI looks like this:
+
+1. **Write your code** in `.eon` files (for example, `main.eon`).
+   You may also write and include `.h` files for C header support.
+2. **Compile and run your code** using the CLI.
+3. **Fix any errors** and iterate as needed.
+
+---
+
+## Supported Source Files
+
+- `.eon` — Eon source files (main code files)
+- `.h` — C header files (for declarations, FFI, or interoperability)
+    - **Note:** The Eon CLI can read and use `.h` header files, but it **cannot output or generate** `.h` files.
+    - You can import header files in your Eon code for type or function declarations when targeting C or using FFI features.
+
+---
+
+## Common CLI Commands
+
+### Run an Eon File
+
+```bash
+$ eon run main.eon
+```
+- Compiles and runs the `main.eon` file but does not produce an output file.
+
+### Compile to Output
+
+```bash
+$ eon build main.eon -o <PY|JS|C|BIN>
+```
+- Compiles the file and produces an executable or output file (Python, JavaScript, C source, or binary), depending on your setup.
+- If your code depends on `.h` files, they will be referenced but **not generated**.
+
+### Check for Errors (Lint)
+
+```bash
+$ eon check main.eon
+```
+- Checks your code for syntax and type errors without running it.
+- Will also check for missing or incompatible `.h` headers if referenced.
+
+### Show Help
+
+```bash
+$ eon -h
+```
+- Displays a list of all available CLI commands and options.
+
+### Show Version
+
+```bash
+$ eon -v
+```
+- Displays the current version of Eon you have installed on your system.
+
+---
+
+## Typical Project Structure
+
+```
+my-project/
+  main.eon
+  utils.h
+  README.md
+```
+
+- You can split code across multiple `.eon` files and `.h` header files and import them as needed.
+- `.h` files are supported for including C declarations, but Eon will **never output** `.h` files as part of code generation.
+
+---
+
+## Tips
+
+- Always save your `.eon` files and `.h` files before running or building.
+- Use `eon check` frequently to catch errors early, especially when working with header files.
+- Refer to the [Examples](/library/examples) for sample projects you can try.

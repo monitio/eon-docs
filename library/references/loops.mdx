@@ -1,0 +1,136 @@
+---
+title: Loops & Conditionals
+description: Reference for loops and conditional statements in Eon, including if, else, for, and while.
+---
+
+---
+
+Control flow statements like loops and conditionals are essential for making decisions and repeating actions in your Eon programs. This page covers the main constructs: `if`, `else`, `while`, `for`, and related features.
+
+---
+
+## `if` Statements
+
+Use `if` to execute code when a condition is true.
+
+```eon
+v x = 10;
+if x > 5 {
+  print("x is greater than 5");
+}
+```
+
+- The condition goes immediately after `if` and before the `{}` block.
+- No parentheses are required around the condition.
+
+---
+
+## `else` and `else if`
+
+Use `else` to provide alternative code when the `if` condition is false.
+You can chain multiple conditions with `else if`:
+
+```eon
+v x = 3;
+if x > 5 {
+  print("x is greater than 5");
+} else if x == 5 {
+  print("x is exactly 5");
+} else {
+  print("x is less than 5");
+}
+```
+
+- `else` and `else if` must follow an `if` block.
+- Only one `else` block is allowed, but multiple `else if` blocks can be chained.
+
+---
+
+## `while` Loops
+
+Use `while` to repeat a block of code as long as a condition is true.
+
+```eon
+v count = 0;
+while count < 3 {
+  print("Count is", count);
+  count = count + 1;
+}
+```
+
+- The loop continues until the condition becomes false.
+- Use `break` to exit the loop early, and `continue` to skip the rest of the current iteration.
+
+---
+
+## `for` Loops
+
+Use `for` to iterate over elements in a list or range.
+
+```eon
+v items = ["apple", "banana", "cherry"];
+for item in items {
+  print("Fruit:", item);
+}
+```
+
+Or, with a range:
+
+```eon
+for i in range(3) {
+  print("Index:", i);
+}
+```
+
+- The variable before `in` receives each element or index.
+- Works with lists, strings, or any iterable.
+
+---
+
+## `break` and `continue`
+
+- `break` exits the nearest enclosing loop.
+- `continue` skips to the next iteration of the nearest enclosing loop.
+
+```eon
+v i = 0;
+while i < 5 {
+  i = i + 1;
+  if i == 2 {
+    continue; // Skip when i is 2
+  }
+  if i == 4 {
+    break;    // Stop loop when i is 4
+  }
+  print(i);
+}
+// Output: 1, 3
+```
+
+---
+
+## Nesting and Combining
+
+You can nest and combine conditionals and loops for more complex control flow:
+
+```eon
+v items = [1, 2, 3];
+for n in items {
+  if n % 2 == 0 {
+    print(n, "is even");
+  } else {
+    print(n, "is odd");
+  }
+}
+```
+
+---
+
+## Summary
+
+- Use `if`, `else if`, and `else` for conditional logic.
+- Use `while` and `for` for loops.
+- Use `break` and `continue` to control loop execution.
+- No parentheses are required around conditions, but curly braces `{}` are always required for blocks.
+
+For more examples, see the pages [Examples](/library/examples) and [Functions](/library/references/functions).

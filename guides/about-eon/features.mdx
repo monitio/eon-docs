@@ -1,0 +1,84 @@
+---
+title: "Features & Differences"
+description: "The key features of Eon and how it differs from other languages."
+sidebarTitle: "Features & Differences"
+---
+
+Eon is designed to be a modern, flexible language that gets inspiration from Python, JavaScript, C, and other popular languages like Rust. Below is a list of Eon's unique features and how it stands out compared to other programming languages.
+
+---
+
+## Why pick Eon?
+
+- **Use the same codebase for multiple targets**
+- **Readable and maintainable syntax**
+- **Automatic type inference**
+- **First-class documentation support**
+- **Cross-platform native binaries and scripting**
+
+---
+
+## Differences
+
+Here's how Eon stands out compared to other languages:
+
+| Feature                | **Eon**      | Python      | JavaScript   | C            |
+|------------------------|--------------|-------------|--------------|--------------|
+| **Transpiles to...**   | C, Python, JS| N/A         | N/A          | N/A          |
+| **Native Binaries**    | Yes (via C)  | Via Cython  | Not without runtime | Yes   |
+| **Type System**        | Inferred     | Dynamic     | Dynamic      | Static       |
+| **Function Keyword**   | `f`          | `def`       | `function`/`=>` | Return type |
+| **Variable Keyword**   | `v`          | None        | `let`/`var`/`const` | Type name |
+| **Comment Styles**     | `//` or `#`  | `#`         | `//`/`/* */` | `//`/`/* */` |
+| **Doc-Comments**       | `~` (markdown/HTML) | Docstring | JSDoc       | Doxygen     |
+| **Case Sensitivity**   | Insensitive  | Sensitive   | Sensitive    | Sensitive    |
+| **Standard Library**   | Yes ([libEon](/library))       | Yes         | Yes          | Yes          |
+
+---
+
+## Key Features
+
+### 1. **Multi-Target Transpilation**
+- **Transpile to C, Python, and JavaScript**
+  Write code once in Eon and output to multiple target languages.
+- **Native Binaries via C**
+  Compile to C and then to native executables on any platform.
+- **Scripting Outputs**
+  Generate `.py` or `.js` files for scripting environments.
+
+### 2. **Simple, Readable Syntax**
+- **Minimalistic, Friendly Syntax**
+  Easy to read and write, inspired by Python, JavaScript, C and Rust.
+- **Flexible Comments**
+  Use `#` or `//` interchangeably for line comments.
+- **Doc-Comments ("Comment-Functions")**
+  Use `~` for markdown/HTML documentation attached to code blocks.
+
+### 3. **Functions & Variables**
+- **Function Declarations with `f`**
+  Define with `f name() { ... }`, call with or without brackets if no arguments.
+- **Variable Declaration with `v`**
+  No need for explicit types of variables; Eon picks the type of your variable automatically.
+
+### 4. **Cross-Platform**
+- **True "Write Once, Run Anywhere"**
+  Compile your code for Windows, Linux, or macOS from the same Eon source.
+- **No Runtime Lock-in**
+  Choose between scripting and native binaries.
+
+### 5. **Consistent Naming & Rules**
+- **Case Insensitive**
+  Variable and function names are case-insensitive, but cannot collide.
+- **Reserved Words Protection**
+  Safeguards against using reserved or built-in names.
+
+### 6. **First-Class Documentation**
+- **Comment-Functions for Docs**
+  Use markdown and HTML in doc comments for rich inline documentation.
+- **Highlighting Support in Editors**
+  Designed for easy integration with editor tooling.
+
+---
+
+Want to see more?
+Check out the [Examples](/library/examples), [Language references](/library/references), or [Standard Library](/library).

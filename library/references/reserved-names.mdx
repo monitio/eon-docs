@@ -1,0 +1,90 @@
+---
+title: Reserved Names
+description: List of reserved names and keywords that cannot be used for variables or functions in Eon.
+---
+
+---
+
+Certain names are **reserved** in Eon and cannot be used for your own variables or functions. This prevents conflicts with the core language features, standard library, and built-in functions.
+
+---
+
+## Why are names reserved?
+
+- To avoid accidental overwriting of important features or standard library functions.
+- To ensure your code is compatible with current and future versions of Eon.
+
+---
+
+## List of Reserved Names
+
+Below are names that **cannot** be used for variables or function names in your Eon code.
+
+### Language Keywords
+- f ([functions](/library/references/functions))
+- v ([variables](/library/references/variables))
+- return ([return values](/library/references/functions#return-values))
+- if ([conditionals](/library/references/loops#if-statements))
+- else ([conditionals](/library/references/loops#else-and-else-if))
+- for ([loops](/library/references/loops#for-loops))
+- while ([loops](/library/references/loops#while-loops))
+- break ([loops](/library/references/loops#break-and-continue))
+- continue ([loops](/library/references/loops#break-and-continue))
+- true ([booleans](/library/references/variables#booleans))
+- false ([booleans](/library/references/variables#booleans))
+- null ([null values](/library/references/variables#null))
+- main ([entry point](/library/references/functions#the-main-function))
+
+<Note>
+  The main function is the [entry point](/library/references/functions#the-main-function) of your Eon program. You must define a function named `main` to run your code.
+  Because of this there is an exception to the rule: you **have** to use `main` as a **function** name **but cannot** use it as a variable name.
+  Using `main` as a variable name will result in a compiler and transpiler **error**. You can also not use the name `main` **twice** in **functions** as that will cause an **error**.
+</Note>
+
+### Built-in Functions and Types
+
+```text
+print
+input
+len
+typeof
+range
+int
+float
+str
+bool
+list
+array
+map
+dict
+set
+exit
+Error
+```
+
+### Standard Library & Internal
+
+```text
+libEon
+std
+os
+sys
+math
+time
+fs
+args
+env
+log
+```
+
+---
+
+## Notes
+
+- Names are **case-insensitive** in Eon. For example, `Main`, `main`, and `MAIN` are all considered the same and are reserved.
+- Using a reserved name for your own function or variable will result in a compiler or transpiler error.
+- This list may expand as Eon grows and adds more built-in features.
+
+---
+
+For more guidance on naming variables and functions, see the [Variables](/library/references/variables) and [Functions](/library/references/functions) pages.

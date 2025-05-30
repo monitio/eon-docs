@@ -1,0 +1,123 @@
+---
+title: Variables
+description: Comprehensive guide to variables in Eon
+---
+
+---
+
+Variables in Eon are used to store and manipulate data throughout your programs. This page provides an overview of variable declaration, types (including booleans and null), and usage patterns.
+
+---
+
+## Declaring Variables
+
+To declare a variable in Eon, use the `v` keyword:
+
+```eon
+v myVar = "Hello, Eon!";
+v number = 42;
+```
+
+- The `v` keyword is always required for variable declarations.
+- Variable names can contain letters, numbers, and **underscores**, and are **case-insensitive**.
+- You do **not** need to specify a type; Eon will automatically infer the type based on the assigned value.
+
+---
+
+## Assigning and Updating Variables
+
+You can update the value of a variable by simply assigning a new value to it:
+
+```eon
+v greeting = "Hello";
+greeting = "Hi there!";
+```
+
+---
+
+## Variable Types
+
+Eon supports the following basic types (type inference is automatic):
+
+- **String**: `"text"`
+- **Number**: `123`, `3.14`
+- **Boolean**: `true`, `false`
+- **Null**: `null` (represents the absence of a value)
+- **List/Array**: `[1, 2, 3]`
+- **Other types** may be supported in the future or via libraries.
+
+### Booleans
+
+Booleans represent truth values and are written as `true` or `false`:
+
+```eon
+v isActive = true;
+v isEmpty = false;
+```
+
+You can use boolean variables in conditionals:
+
+```eon
+if isActive {
+  print("The value is active!");
+}
+```
+
+### Null
+
+The `null` value represents the absence of a value or "nothing":
+
+```eon
+v data = null;
+```
+
+You can check for `null` in your code:
+
+```eon
+if data == null {
+  print("No data available.");
+}
+```
+
+---
+
+## Scope
+
+Variables are scoped to the function or block in which they are defined:
+
+```eon
+f example() {
+  v x = 10;
+  // x is accessible here
+}
+// x is not accessible here
+```
+
+---
+
+## Examples
+
+```eon
+v count = 1;
+v name = "Eon";
+v isReady = true;
+v wasFound = false;
+v result = null;
+
+count = count + 1;
+name = "NewName";
+isReady = false;
+result = 100;
+```
+
+---
+
+## Naming Rules
+
+- Variable names cannot be the same as function names in the same scope.
+- Certain names are **reserved** and cannot be used for variables (see [Reserved Names](/library/references/reserved-names)).
+- Names are case-insensitive: `foo`, `FOO`, and `Foo` refer to the same variable.
+
+---
+
+For more about using variables in context, see the [Examples](/library/examples) or try them in your own Eon code!

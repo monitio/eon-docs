@@ -1,0 +1,88 @@
+---
+title: 'Quickstart'
+sidebarTitle: "Quickstart"
+description: 'Start coding awesome things in under 5 minutes'
+---
+
+## Setup your environment
+
+Installing the things Eon needs to work.
+
+### Windows:
+
+<AccordionGroup>
+  <Accordion icon="download" title="Download tools">
+    To make the most of Eon, you need to install the following tools:
+
+    <Accordion title="100% needed">
+      - [Git](https://git-scm.com/downloads) (Always needed to clone and manage repos)
+      - [Eon](https://eon.moniti.org/download) (The main Eon toolchain)
+      - [MinGW64](https://winlibs.com/) (A native Windows port of Mingw tools)
+      - [Chocolatey](https://chocolatey.org/install) (A package manager for Windows)
+      - [Clang/LLVM](https://clang.llvm.org/) (Needed for compiling from C to native binaries)
+
+      <Note>
+        Make sure you install the **64-bit** version of **MinGW64**.
+        And also make sure you install the **Clang/LLVM toolchain** through **Chocolatey** using the command `choco install llvm`.
+      </Note>
+    </Accordion>
+
+    <Accordion title="Optional but recommended">
+    - [Node.js](https://nodejs.org/en/download/) (version **22.16.0 or higher** for JS
+      support)
+    - [Python](https://www.python.org/downloads/) (version **3.10 or higher** for
+      Python support)
+    </Accordion>
+  </Accordion>
+  <Accordion icon="rectangle-terminal" title="Setting up the environment">
+    If you installed the **tools above**, you should be ***fine*** and all ready to go.
+
+    <Note>
+      If you installed the **optionally** ***recommended*** tools, you will get more functionality when using Eon.
+    </Note>
+
+    Now you can run `eon.exe` from your terminal. If you installed the tools correctly, you should see something similar to this message:
+    ```powershell
+    $ eon.exe
+    [30/05/25 | 20:05:00] [LOG] Usage: eon.exe <*.eon> <output>
+    ```
+  </Accordion>
+</AccordionGroup>
+
+### Linux:
+
+<AccordionGroup>
+  <Accordion icon="download" title="Download tools">
+    To make the most of Eon on Linux, install the following tools:
+
+    <Accordion title="100% needed">
+      - [Git](https://git-scm.com/downloads) (Always needed to clone and manage repositories)
+      - [Eon](https://eon.moniti.org/download) (The main Eon toolchain)
+      - **C Compiler** (needed for native binaries):
+        - [Clang/LLVM](https://clang.llvm.org/)
+        Install with your package manager:
+        - <code>sudo apt install build-essential clang</code> (Debian/Ubuntu)
+        - <code>sudo dnf install clang</code> (Fedora)
+        - <code>sudo pacman -S base-devel clang</code> (Arch)
+        - There are many other package managers, so please check your distro's package repos.
+    </Accordion>
+
+    <Accordion title="Optional but recommended">
+      - [Node.js](https://nodejs.org/en/download/) (version **22.16.0 or higher** for JS support)
+      - [Python](https://www.python.org/downloads/) (version **3.10 or higher** for Python support)
+    </Accordion>
+  </Accordion>
+  <Accordion icon="rectangle-terminal" title="Setting up the environment">
+    Once you've installed **all required tools**, you should be ready to use Eon from your terminal.
+
+    <Note>
+      If you installed the **optionally** ***recommended*** tools, you will get more functionality when using Eon, such as Python and JS transpilation support.
+    </Note>
+
+    Now you can run `eon` from your terminal. If you installed the tools correctly, you should see something similar to this message:
+    ```bash
+    $ eon
+    [30/05/25 | 20:05:00] [LOG] Usage: eon <*.eon> <output>
+    ```
+  </Accordion>
+</AccordionGroup>

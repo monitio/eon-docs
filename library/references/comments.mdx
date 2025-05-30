@@ -1,0 +1,76 @@
+---
+title: Comments and Docstrings
+description: Learn how to use comments and docstrings in Eon for better code documentation and readability.
+---
+
+---
+
+Eon provides simple and effective ways to document your code using comments and **comment-functions** (Eon's version of docstrings). Proper documentation helps make your code more readable and maintainable.
+
+## Single-Line Comments
+
+You can use either `#` or `//` to write single-line comments in Eon. Both styles are supported, and everything after the comment marker on the same line is ignored by the compiler.
+
+```eon
+# This is a single-line comment
+// This is also a single-line comment
+
+v x = 10; // You can also place comments after code
+v y = 10; # with both styles.
+```
+
+---
+
+## Multi-Line Comments
+
+Eon does **not** have a dedicated multi-line comment syntax, like `/* ... */`.
+If you want to comment out multiple lines, add a `#` or `//` at the beginning of each line:
+
+```eon
+# This is a multi-line
+# comment in Eon.
+# Each line starts with a comment marker.
+
+// This style works too
+// for multiline comments.
+```
+
+---
+
+## Comment-Functions (Docstrings)
+
+Eon supports **comment-functions**, which are similar to docstrings in other languages.
+A comment-function starts with a `~` symbol and can attach markdown or HTML documentation to functions, variables, or other code elements.
+
+You can write a single-line comment-function:
+
+```eon
+~This function prints a greeting.
+f greet() {
+  print("Hello!");
+}
+```
+
+Or use curly braces `{}` for multi-line documentation, including markdown:
+
+```eon
+~ {
+Prints "Hello, world!"
+
+- This function prints a greeting to the console.
+- You can use markdown **formatting** here.
+
+And you can use HTML as well if you want.
+}
+f hw() {
+  print("Hello, world!");
+}
+```
+
+- Comment-functions can be placed immediately before the function, variable, or type you want to document.
+- Multi-line comment-functions can include markdown or HTML for rich documentation.
+- These are used by code editors and tooling to provide inline docs, similar to Python docstrings or JSDoc.
+
+---
+
+For more examples, see the [Examples list](/library/examples).

@@ -1,55 +1,73 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Eon-Docs",
+  "name": "Eon Docs",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#F5CB3A",
+    "light": "#F8DE4D",
+    "dark": "#DFB95F"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/images/logos/favicon.svg",
   "navigation": {
     "tabs": [
       {
         "tab": "Guides",
         "groups": [
           {
-            "group": "Get Started",
+            "group": "About Eon",
             "pages": [
-              "index",
-              "quickstart",
-              "development"
+              "guides/about-eon/index",
+              "guides/about-eon/features"
             ]
           },
           {
-            "group": "Essentials",
+            "group": "Get Started",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/settings",
-              "essentials/navigation",
-              "essentials/reusable-snippets"
+              "guides/get-started/quickstart"
+            ]
+          },
+          {
+            "group": "Next Steps",
+            "pages": [
+              "guides/next-steps/CLI",
+              "guides/next-steps/developing"
             ]
           }
         ]
       },
       {
-        "tab": "API Reference",
+        "tab": "Standard Library",
         "groups": [
           {
-            "group": "API Documentation",
+            "group": "Library Documentation",
             "pages": [
-              "api-reference/introduction"
+              "library/index"
             ]
           },
           {
-            "group": "Endpoint Examples",
+            "group": "References",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "library/references/comments",
+              "library/references/loops",
+              "library/references/reserved-names",
+              "library/references/variables"
+            ]
+          },
+          {
+            "group": "Functions",
+            "pages": [
+              "library/references/functions/index",
+              "library/references/functions/print",
+              "library/references/functions/input"
+            ]
+          },
+          {
+            "group": "Examples",
+            "pages": [
+              "library/examples/index",
+              "library/examples/hello-world",
+              "library/examples/hello-world-function",
+              "library/examples/greet"
             ]
           }
         ]
@@ -58,45 +76,44 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
+          "anchor": "Github Repo",
+          "href": "https://github.com/monitio/eon",
+          "icon": "Github"
         },
         {
           "anchor": "Community",
-          "href": "https://mintlify.com/community",
-          "icon": "slack"
+          "href": "https://discord.gg/monitio",
+          "icon": "Discord"
         },
         {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "Todo List",
+          "href": "https://github.com/monitio/eon/blob/main/TODO.md",
+          "icon": "clipboard"
         }
       ]
     }
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/images/logos/light.svg",
+    "dark": "/images/logos/dark.svg"
   },
   "navbar": {
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "https://discord.gg/monitio"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Download Eon",
+      "href": "https://eon.moniti.org/download"
     }
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "discord": "https://discord.gg/monitio",
+      "github": "https://github.com/monitio/eon"
     }
   }
 }

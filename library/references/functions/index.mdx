@@ -1,0 +1,146 @@
+---
+title: Function Rules
+description: Reference and guide for defining and using functions in Eon.
+---
+
+---
+
+Functions are a fundamental building block in Eon, allowing you to organize your code for reuse, modularity, and clarity. This page covers how to define, document, and use functions in Eon.
+
+---
+
+## Defining Functions
+
+To define a function in Eon, use the `f` keyword followed by the function name, optional parameters in parentheses, and a code block in curly braces.
+
+```eon
+f greet() {
+  print("Hello, world!");
+}
+```
+
+- **`f`** is always required for function declarations.
+- Function names can contain letters, numbers, and underscores, and are **case-insensitive**.
+- The function body must be wrapped in `{ }`.
+- Use a semicolon (`;`) after statements inside the function.
+
+---
+
+## Calling Functions
+
+To call a function, use its name followed by parentheses if there are parameters.
+If the function takes no parameters, you can call it with or without `()` and must end the call with a semicolon.
+
+```eon
+greet;       // Valid
+greet();     // Also valid
+```
+
+If the function has parameters, you must use parentheses and provide arguments:
+
+```eon
+f add(a, b) {
+  return a + b;
+}
+
+add(3, 4); // Returns 7
+```
+
+---
+
+## Parameters
+
+Parameters are specified in parentheses after the function name. Separate multiple parameters with commas.
+
+```eon
+f printMessage(message) {
+  print(message);
+}
+```
+
+- Parameter types are inferred automatically.
+
+---
+
+## Return Values
+
+Use the `return` keyword to return a value from a function. If no return statement is provided, the function returns nothing.
+
+```eon
+f double(x) {
+  return x * 2;
+}
+
+v result = double(10); // result is 20
+```
+
+---
+
+## The `main` Function
+
+Eon programs start executing from the `main` function.
+You must define a function named `main` or `Main` as the entry point:
+
+```eon
+f main() {
+  // your code here
+  return 0;
+}
+```
+
+- The return value of `main` is typically used as the program's exit code.
+
+---
+
+## Documentation for Functions
+
+You can use **comment-functions** (Eon's version of docstrings) to document your functions.
+Place a `~` before the function, with optional `{}` for multi-line docs supporting markdown:
+
+```eon
+~Prints a greeting to the console.
+f greet() {
+  print("Hello!");
+}
+
+~{
+Adds two numbers and returns the sum.
+
+- Parameters:
+  - `a`: The first number.
+  - `b`: The second number.
+- Returns the sum of `a` and `b`.
+}
+f add(a, b) {
+  return a + b;
+}
+```
+
+---
+
+## Example
+
+```eon
+~Prints "Hello, world!"
+f hello() {
+  print("Hello, world!");
+}
+
+f main() {
+  hello;
+  return 0;
+}
+```
+
+---
+
+## Naming Rules & Best Practices
+
+- Function names must be unique from variables in the same scope.
+- Names are case-insensitive: `foo`, `FOO`, and `Foo` are the same function.
+- Avoid using reserved or standard library names for your functions.
+- Document your functions with comment-functions for better code readability.
+
+---
+
+For more, see the [Examples](/library/examples) and [Variables](/library/references/variables) pages.
