@@ -116,7 +116,8 @@
   "footer": {
     "socials": {
       "discord": "https://dc.moniti.org",
-      "github": "https://github.com/monitio/eon"
+      "github": "https://github.com/monitio/eon",
+      "website": "https://moniti.org"
     }
   }
 }
