@@ -1,5 +1,5 @@
 {
-  "$schema": "https://mintlify.com/docs.json",
+  "$schema": "https://raw.githubusercontent.com/monitio/eon-docs/refs/heads/main/mintlify.schema.docs.json",
   "theme": "mint",
   "name": "Eon Docs",
   "colors": {
@@ -117,7 +117,8 @@
     "socials": {
       "discord": "https://dc.moniti.org",
       "github": "https://github.com/monitio/eon",
-      "website": "https://moniti.org"
+      "website": "https://moniti.org",
+      "copyright": "https://moniti.org/copyright"
     }
   }
 }

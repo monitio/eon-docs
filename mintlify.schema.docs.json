@@ -11,7 +11,7 @@
         "$schema": {
           "type": "string",
           "format": "uri",
-          "default": "https://mintlify.com/docs.json",
+          "default": "https://raw.githubusercontent.com/monitio/eon-docs/refs/heads/main/mintlify.schema.docs.json",
           "description": "The URL of the schema file"
         },
         "name": {
@@ -371,7 +371,8 @@
                   "bluesky",
                   "threads",
                   "reddit",
-                  "podcast"
+                  "podcast",
+                  "copyright"
                 ]
               },
               "description": "An object in which each key is the name of a social media platform, and each value is the url to your profile. For example: { \"x\": \"https://x.com/mintlify\" }"
