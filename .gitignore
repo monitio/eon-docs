@@ -1,0 +1,15 @@
+# eon-docs - Eon Documentation
+
+# Ignore Mintlify generated files
+.mintlify-last
+.mintlify-*
+
+# Ignore NodeJS stuff
+node_modules/
+package-lock.json
+.npmrc
+.npm/
+
+# Ignore build artifacts
+dist/
+build/
