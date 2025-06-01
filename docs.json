@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/monitio/eon-docs/refs/heads/main/mintlify.schema.docs.json",
+  "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
   "name": "Eon Docs",
   "colors": {
@@ -117,8 +117,29 @@
     "socials": {
       "discord": "https://dc.moniti.org",
       "github": "https://github.com/monitio/eon",
-      "website": "https://moniti.org",
-      "copyright": "https://moniti.org/copyright"
-    }
+      "website": "https://moniti.org"
+    },
+    "links": [
+      {
+        "items": [
+          {
+            "label": "Privacy Policy",
+            "href": "https://moniti.org/privacy-policy"
+          },
+          {
+            "label": "Terms of Service",
+            "href": "https://moniti.org/terms-of-service"
+          },
+          {
+            "label": "Code of Conduct",
+            "href": "https://moniti.org/code-of-conduct"
+          },
+          {
+            "label": "Copyright",
+            "href": "https://moniti.org/copyright"
+          }
+        ]
+      }
+    ]
   }
 }
